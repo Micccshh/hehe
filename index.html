@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("background-pic.png");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      
+      .box {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50px;
+        box-shadow: 0px 0px 10px #888;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+      }
+      
+      input[type="password"] {
+        border: none;
+        border-radius: 10px;
+        border: 2px solid #333;
+        font-size: 1.2em;
+        padding: 10px;
+        width: 60%;
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <input type="password" id="password" placeholder="Password">
+    </div>
+    
+    <script>
+      const passwordInput = document.getElementById("password");
+      passwordInput.addEventListener("keyup", function(event) {
+        if (event.target.value === "123") {
+          window.location.href = "new-page.html";
+        }
+      });
+    </script>
+  </body>
+</html>
